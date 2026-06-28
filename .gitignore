@@ -17,6 +17,13 @@ dist/
 *.log
 npm-debug.log*
 
+# TypeScript 增量构建缓存(自动产物)
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+frontend/vite.config.js.map
+frontend/vite.config.d.ts.map
+
 # IDE / 编辑器
 .vscode/
 .idea/
