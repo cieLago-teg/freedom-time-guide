@@ -45,3 +45,14 @@ data/
 .env
 .env.local
 .env.production
+
+# 一次性验收脚本与临时产物
+.chrome-verify/
+.chrome-verify2/
+screenshots/
+verify-render.js
+verify-interaction.js
+backend/uvicorn.log
+backend/uvicorn.log.err
+backend/uvicorn.err.log
+backend/dom-dump.html
