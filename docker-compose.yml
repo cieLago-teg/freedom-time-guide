@@ -1,0 +1,16 @@
+# 一键启动前后端 + 数据持久化
+services:
+  app:
+    build: .
+    container_name: freedom-time-guide
+    ports:
+      - "8766:8766"
+    volumes:
+      # 数据库文件持久化到本地 ./data
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://127.0.0.1:8766/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
